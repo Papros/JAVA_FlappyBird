@@ -9,12 +9,12 @@ import java.awt.EventQueue;
 		
 			Stage s = new Stage();
 			
-		EventQueue.invokeLater(new Runnable() {
-			@Override
-			public void run() {
-				new MyFrame(s);
+			MyFrame frame = new MyFrame(s);
+			
+			while(true) {
+			s.restart();
+			s.game_loop();
 			}
-		});
 	}
 
 }
